@@ -41,3 +41,21 @@ console.log(true);
 console.log(typeof false);
 console.log(5 > 20);
 console.log(30 > 10);
+
+// 9 - comparações
+console.log(5 > 2);
+console.log(5 < 2);
+console.log(5 >= 2);
+console.log(5 <= 2);
+console.log(5 == 2);
+console.log(5 === 2);
+console.log(5 != 2);
+
+// 10 - Valor idêntico
+console.log(9 == "9");
+
+console.log(9 === "9");
+
+console.log(9 != "9");
+
+console.log(9 !== "9");
