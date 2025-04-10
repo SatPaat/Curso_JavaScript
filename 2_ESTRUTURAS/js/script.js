@@ -107,3 +107,63 @@ if (username === "José"){
 }else{
     console.log("Nenhuma condição aceita");
 }
+
+// 9 - While
+let p = 0
+
+while(p < 0){
+    console.log(`Repetindo ${p}`)
+    p = p + 1;
+}
+
+// 10 - Do While
+let o = 10
+
+do{
+    console.log(`Valor de o: ${o}`)
+    o--
+}while(o > 1);
+
+// 11 - For
+for(let t = 0; t < 10; t++){
+    console.log("Repetindo algo...");
+}
+
+let r = 0
+
+for(r; r > 10; r = r - 1){
+    console.log("O r está diminuindo");
+}
+
+// 12 - Identação
+for (let u = 0; u < 10; u++){
+    if(u * 2 > 10){
+        console.log(`Maior que 10! ${u}`)
+    } else{
+        if(u / 2 === 0){
+            console.log("Deu 0")
+        }
+    }    
+}
+
+// 13 - break
+//for(let g = 20; g > 10; g--){
+//    console.log(`Valor de g é ${g}`);
+//
+//    if( g === 12){
+ //       console.log(`Valor de g é 12!`);
+//       break;
+//    }
+//}
+
+for(let y = 20; y < 20; y--){
+    console.log(`O valor de y é ${y}`);
+
+    if( y === 5){
+        console.log("Y é 5 ")
+        break;
+    }
+}
+
+
+
