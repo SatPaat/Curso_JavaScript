@@ -165,5 +165,14 @@ for(let y = 20; y < 20; y--){
     }
 }
 
+// 14 - continue
+for(let s = 1; s < 10; s = s + 1){
+    //operador de resto = %
+    if(s % 2 === 0){
+        console.log("Número par!");
+        continue
+    }
+    console.log(s);
+}
 
 
