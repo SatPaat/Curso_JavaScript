@@ -221,3 +221,50 @@ const reverseTest = [1, 2, 3, 4, 5]
 reverseTest.reverse()
 
 console.log(reverseTest);
+
+// 18 - Trim
+const trimTeste = "  testando /n  "
+
+console.log(trimTeste);
+
+console.log(trimTeste.trim());
+
+console.log(trimTeste.length);
+
+console.log(trimTeste.trim().length);
+
+// 19 - Padstart
+const testePadStart = "1"
+
+const newNumber = testePadStart.padStart(4, "0")
+
+console.log(testePadStart);
+
+console.log(newNumber);
+
+const testePadEnd = newNumber.padEnd(10, "0")
+
+console.log(testePadEnd);
+
+// 20 - split
+const frase = "O rato roeu a roupa do rei de Roma"
+
+const arrayDaFrase = frase.split(" ")
+
+console.log(arrayDaFrase);
+
+// 21 - join
+const fraseDeNovo = arrayDaFrase.join(" ")
+
+console.log(fraseDeNovo);
+
+const itensParaCompra = ["Mouse", "Teclado", "Monitor"]
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaCompra.join(", ")}.`
+
+console.log(fraseDeCompra);
+
+// 22 - Repeat
+const palavra = "testando ";
+
+console.log(palavra.repeat(6));
