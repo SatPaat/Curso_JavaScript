@@ -77,7 +77,7 @@ const obj = {
     b:"true"
 };
 
-console.log(obj instanceof object);
+console.log(obj instanceof Object);
 
 const obj2 = {
     c: []
@@ -120,7 +120,7 @@ console.log(b);
 const users = ["Patrick", "Matheus", "João", "Pedro"]
 
 for(let i = 0; i < users.length; i++){
-    console.log(`Listando o usuário: ${users(i)}`);
+    console.log(`Listando o usuário: ${users[i]}`);
 }
 
 // 11 - Métodos de arrays: push e pop (Adiciona itens no final e remove elementos do final do array)
@@ -268,3 +268,82 @@ console.log(fraseDeCompra);
 const palavra = "testando ";
 
 console.log(palavra.repeat(6));
+
+// 23 - Rest operator
+const somaInfinita = (...args) => {
+    
+    let total = 0
+
+    for(let i = 0; i < args.length; i++){
+        total += args[i]
+    } 
+
+    return total;
+};
+
+console.log(somaInfinita(1, 2, 3));
+
+console.log(somaInfinita(1, 50, 450, 654, 100, 8781, 6540, 1420, 68542));
+
+// 24 - for of
+const somaInfinita2 = (...args) => {
+    let total = 0
+
+    for(let num of args){
+        total += num;
+    }
+
+    return total;
+};
+
+console.log(somaInfinita2(2 , 5, 4));
+console.log(somaInfinita2(1, 50, 450, 654, 100, 8781, 6540, 1420, 68542));
+
+// 25 - Destructuring em objetos
+const userDetails = {
+    firstName: "Patrick",
+    lastName: "Correa",
+    job: "Programador"
+}
+
+const {firstName, lastName, job} = userDetails
+
+console.log(firstName, lastName, job);
+
+// renomear as variáveis
+const{ firstName: primeiroNome } = userDetails;
+
+console.log(firstName)
+
+// 26 - Destructuring em arrays
+const myList = ["Avião", "Submarino", "Carro", "Trator"]
+ 
+const [veiculoA, veiculoB, veiculoC] = myList
+
+console.log(veiculoA, veiculoB, veiculoC);
+
+// 27 - JSON
+const myJson = '{"name": "Patrick", "age": 23, "skills": ["JavaScript", "Python", "PHP"]}'; 
+
+console.log(myJson);
+
+console.log(typeof myJson);
+
+// 28 - Conversão JSON
+const myObject = JSON.parse(myJson)
+
+console.log(myObject);
+
+// Json inválido
+        // const badJson = '{"name": Patrick, "age": 23}'
+        //const myBadObject = JSON.parse(badJson); 
+
+myObject.isOpenToWork = true;
+
+console.log(myObject);
+
+const myNewJson = JSON.stringify(myObject)
+
+console.log(myNewJson);
+
+console.log(typeof myNewJson);
