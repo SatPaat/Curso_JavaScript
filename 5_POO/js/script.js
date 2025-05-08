@@ -136,3 +136,5 @@ const jeff = new CachorroClasse("Jeff", "labrador")
 console.log(jeff)
 
 console.log(Object.getPrototypeOf(jeff));
+
+// 10 - Mais sobr classes
