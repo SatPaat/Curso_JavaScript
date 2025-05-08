@@ -137,4 +137,123 @@ console.log(jeff)
 
 console.log(Object.getPrototypeOf(jeff));
 
-// 10 - Mais sobr classes
+// 10 - Mais sobre classes
+class Caminhao {
+    constructor(eixos, cor){
+        this.eixos = eixos;
+        this.cor = cor;
+    }
+
+    descreverCaminhao(){
+        console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`)
+    }
+}
+
+const scania = new Caminhao(6, "Vermelho")
+
+console.log(scania);
+
+scania.descreverCaminhao();
+
+
+Caminhao.prototype.motor = 4.0
+
+const c3 = new Caminhao(6, "Azul");
+
+console.log(c3.motor);
+
+// 11 - override
+class Humano {
+    constructor(nome, idade){
+        this.nome = nome
+        this.idade = idade
+    }
+}
+
+const patrick = new Humano("Patrick", 23)
+
+console.log(patrick);
+
+console.log(Humano.prototype.idade);
+
+Humano.prototype.idade = "Não definido"
+
+console.log(patrick.idade);
+
+console.log(Humano.prototype.idade);
+
+// 12 - Symbol com classes
+class Aviao{
+    constructor(marca, turbinas){
+        this.marca = marca
+        this.turbinas = turbinas
+    }
+}
+
+const asas = Symbol()
+const pilotos = Symbol()
+
+Aviao.prototype[asas] = 2;
+
+Aviao.prototype[pilotos] = 3;
+
+const boeing = new Aviao("Boeing", 10)
+
+console.log(boeing);
+
+console.log(boeing[asas]);
+console.log(boeing[pilotos]);
+
+// 13 - getter e setter
+class Post {
+    constructor(titulo, descricao, tags){
+        this.titulo = titulo
+        this.descricao = descricao
+        this.tags = tags
+    }
+    
+    get exibirTitulo(){
+        return `Você está lendo ${this.titulo}`;
+    }
+
+    set adicionarTags(tags){
+        const tagsArray = tags.split(", ")
+        this.tags = tagsArray
+    }
+}
+
+const myPost = new Post("Algum post", "Post sobre programação");
+
+console.log(myPost);
+
+console.log(myPost.exibirTitulo);
+
+myPost.adicionarTags = "programação, javascript, js"
+
+console.log(myPost)
+
+// 14 - Herança
+class Mamifero{
+    constructor(patas){
+        this.patas = patas
+    }
+}
+
+class Lobo extends Mamifero{
+    constructor(patas, nome){
+        super(patas, patas)
+        this.nome = nome
+    }
+}
+
+const shark = new Lobo(4, "Shark");
+
+console.log(shark);
+
+// 15 - instanceOf
+console.log(shark instanceof Lobo); //true
+console.log(Lobo instanceof Mamifero); // false - verificação das classes
+
+console.log(new Lobo(4, "teste") instanceof Mamifero); //true - verificação de Objeto 
+
+console.log(new Post("a", "b") instanceof Lobo); //false
