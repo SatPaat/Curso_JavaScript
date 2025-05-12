@@ -50,3 +50,31 @@ console.log("Executou o debugger");
 if(c < 5){
     c = 25;
 }
+
+// 4 - tratamento de dados
+function checkNumber(n){
+
+    const result = Number(n)
+
+    if(Number.isNaN(result)){
+        console.log("Valor incorreto!")
+        return;
+    }
+
+    console.log("Valor correto!")
+    return result;
+} 
+
+checkNumber(5);
+checkNumber("10");
+checkNumber({});
+checkNumber("teste");
+
+// 5 - exception
+let x = 10
+
+if(x != 11){
+    throw new Error("O valor de x não pode ser diferente de 11!")
+}
+
+
