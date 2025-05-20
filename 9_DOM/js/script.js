@@ -31,5 +31,28 @@ const mainContainer = document.querySelector("#main-container");
 
 console.log(mainContainer);
 
+// 6 - InsertBefore
+const p = document.createElement("p")
+
+const header = title.parentElement
+
+header.insertBefore(p, title);
+
+// 7 - appendChild
+const navLinks = document.querySelector("nav ul")
+
+const li = document.createElement("li")
+
+navLinks.appendChild(li);
+
+// 8 - replaceChild
+const h2 = document.createElement("h2")
+
+h2.textContent = "Meu novo título"
+
+header.replaceChild(h2, title)
+
+
+
 
 
