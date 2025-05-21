@@ -52,7 +52,49 @@ h2.textContent = "Meu novo título"
 
 header.replaceChild(h2, title)
 
+// 9 - CreateTextNode
+const myText = document.createTextNode("Agora vamos colocar mais um título!")
+console.log(myText);
 
+const h3 = document.createElement("h3");
 
+h3.appendChild(myText);
+console.log(h3);
 
+mainContainer.appendChild(h3);
+
+// 10 - Trabalhando com atributos
+const firstLink = navLinks.querySelector("a")
+
+console.log(firstLink);
+
+firstLink.setAttribute("href","https://www.google.com");
+
+console.log(firstLink.getAttribute("href"));
+
+firstLink.setAttribute("target", "_blank");
+
+// 11 - Altura e largura
+const footer = document.querySelector("footer");
+
+console.log(footer.offsetWidth);
+console.log(footer.offsetHeight);
+
+console.log(footer.clientWidth);
+console.log(footer.clientHeight);
+
+// 12 - posição do elemento
+const product1 = product[0]
+
+console.log(product1.getBoundingClientRect)
+
+// 13 - Css com Js
+mainContainer.style.color = "red"
+mainContainer.style.backgroundColor = "#333"
+mainContainer.style.paddingBottom = "15px"
+
+// 14 - alterando estilos de vários elementos
+for (const li of listItens){
+    li.style.backgroundColor = "red";
+}
 
