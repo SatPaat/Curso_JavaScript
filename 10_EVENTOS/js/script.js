@@ -61,3 +61,63 @@ document.addEventListener("keyup", (e) => {
 document.addEventListener("keydown", (e) => {
     console.log(`apertou a tecla ${e.key}`)
 })
+
+// 7 - Eventos de mouse 
+const mouseEvents =document.querySelector("mouse")
+
+mouseEvents.addEventListener("mousedown", () => {
+    console.log("Pressionou o botão do mouse");
+});
+
+mouseEvents.addEventListener("mouseup", () => {
+    console.log("Soltou o botão do mouse");
+});
+
+mouseEvents.addEventListener("dblclick", () => {
+    console.log("Clique duplo");
+});
+
+// 8 - Movimento do mouse
+document.addEventListener("mousemove", (e) => {
+    //console.log(`No eixo X: ${e.x}`)
+    //console.log(`No eixo Y: ${e.y}`)
+})
+
+// 9 - Evento de scroll
+window.addEventListener("scroll", (e) => {
+    if(pageYOffset > 200){
+        console.log("Passamos de 200px");
+    }
+})
+
+// 10 - Evento de foco
+const input = document.querySelector("my-input")
+
+input.addEventListener("focus", (event) => {
+    console.log("Entrou no input");
+});
+
+input.addEventListener("blur", (event) => {
+    console.log("Saiu no input");
+});
+
+// 11 - Debounce
+const debounce = (f, delay) => {
+    
+    let timeout
+
+    return(...arguments) => {
+        if(timeout){
+            clearTimeout(timeout)
+        }
+
+        timeout = setTimeout(() => {
+            f.apply(arguments)
+        }, delay);
+    };
+};
+
+    window.addEventListener("mousemove", debounce(() => {
+    console.log("Executando a cada 400ms")
+    }, 400)
+);
