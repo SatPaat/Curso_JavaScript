@@ -116,4 +116,4 @@ console.log(products);
 const userName = "Patrick"
 const age = 23
 
-console.log(`O nome do usuário é ${userName} e sua idade é ${age} anos`);
+console.log(`O nome do usuário é ${userName} e sua idade é ${age} anos`); 
